@@ -26,7 +26,7 @@ function crearDetalleCarritoHTML(producto) {
 
 function crearCardCarritoVacio() {
     return `<div class="div-card-error">
-                <div><img src="/images/not-found.png" class="img-not-found" /></div>
+                <div><img src="images/not-found.png" class="img-not-found" /></div>
                 <div class="leyenda-error">Ups no encontramos productos en tú carrito</div>
                 <div class="leyenda-intento">Agrega productos a tú carrito para poder visualizarlos.</div>
                 <div><button id="btnSeguirComprando2" class="button-sigue-comprando" type="button">Seguir comprando</button></div>
@@ -35,7 +35,7 @@ function crearCardCarritoVacio() {
 
 function crearCardError() {
     return `<div class="div-card-error">
-                <div><img src="/images/not-found.png" class="img-not-found" /></div>
+                <div><img src="images/not-found.png" class="img-not-found" /></div>
                 <div class="leyenda-error">Ups no encontramos lo que andas buscando</div>
                 <div class="leyenda-intento">Intenta nuevamente.</div>
             </div>`;

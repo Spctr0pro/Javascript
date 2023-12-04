@@ -1,0 +1,107 @@
+[
+    {
+        "id": 1,
+        "nombre": "LG 32 pulgadas smart tv",
+        "imagen": "images/lg-smarttv.jpg",
+        "precio": 2500,
+        "categoria": "Televisores"
+    },
+    {
+        "id": 2,
+        "nombre": "Samsung 55 pulgadas QLED",
+        "imagen": "images/smart-samsung-oled.jpg",
+        "precio": 5800,
+        "categoria": "Televisores"
+    },
+    {
+        "id": 3,
+        "nombre": "Sony 42 pulgadas smart tv",
+        "imagen": "images/sony-smarttv.jpg",
+        "precio": 2000,
+        "categoria": "Televisores"
+    },
+    {
+        "id": 4,
+        "nombre": "Samsung 32 pulgadas smart tv",
+        "imagen": "images/smart-samsung.jpg",
+        "precio": 5000,
+        "categoria": "Televisores"
+    },
+    {
+        "id": 5,
+        "nombre": "LG 62 pulgadas",
+        "imagen": "images/lg-smarttv2.jpg",
+        "precio": 8000,
+        "categoria": "Televisores"
+    },
+    {
+        "id": 6,
+        "nombre": "Iphone 10 6 pulgadas",
+        "imagen": "images/iphone10.jpg",
+        "precio": 6000,
+        "categoria": "Celulares"
+    },
+    {
+        "id": 7,
+        "nombre": "Iphone 12 5 pulgadas",
+        "imagen": "images/iphone12.jpg",
+        "precio": 5000,
+        "categoria": "Celulares"
+    },
+    {
+        "id": 8,
+        "nombre": "Samsung S21 6 pulgadas",
+        "imagen": "images/s21.jpg",
+        "precio": 5500,
+        "categoria": "Celulares"
+    },
+    {
+        "id": 9,
+        "nombre": "Samsung S23 6 pulgadas",
+        "imagen": "images/s23.png",
+        "precio": 6500,
+        "categoria": "Celulares"
+    },
+    {
+        "id": 10,
+        "nombre": "Samsung S22 5 pulgadas",
+        "imagen": "images/s22.jpg",
+        "precio": 6000,
+        "categoria": "Celulares"
+    },
+    {
+        "id": 11,
+        "nombre": "Notebook samsung gamer 14 pulgadas",
+        "imagen": "images/notebook-samsung.jpg",
+        "precio": 7000,
+        "categoria": "Notebooks"
+    },
+    {
+        "id": 12,
+        "nombre": "Notebook Asus 17 pulgadas",
+        "imagen": "images/notebook-asus.jpg",
+        "precio": 5600,
+        "categoria": "Notebooks"
+    },
+    {
+        "id": 13,
+        "nombre": "Notebook Omen gamer 14 pulgadas",
+        "imagen": "images/notebook-omen.jpg",
+        "precio": 8000,
+        "categoria": "Notebooks"
+    },
+    {
+        "id": 14,
+        "nombre": "Notebook HP 13 pulgadas",
+        "imagen": "images/notebook.jpg",
+        "precio": 6700,
+        "categoria": "Notebooks"
+    },
+    {
+        "id": 15,
+        "nombre": "Notebook Asus 14 pulgadas",
+        "imagen": "images/notebook-asus2.jpg",
+        "precio": 5500,
+        "categoria": "Notebooks"
+    }
+]

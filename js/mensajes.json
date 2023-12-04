@@ -1,0 +1,19 @@
+[
+    {
+        "id": 1,
+        "mensaje": "No se encontraron conincidencias para la busqueda ingresada"
+    },
+    {
+        "id": 2,
+        "mensaje": "✅ El costo total de tu compra es de $ "
+    },
+    {
+        "id": 3,
+        "mensaje": "¿Está seguro que desea eliminar este producto?"
+    }
+    ,
+    {
+        "id": 4,
+        "mensaje": "¿Está seguro que desea comprar este carrito?"
+    }
+]

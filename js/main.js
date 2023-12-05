@@ -283,7 +283,7 @@ btnComprarCarrito.addEventListener("click", () => {
                     localStorage.removeItem("MiCarrito")
                     carrito.splice(0, carrito.length)
                     cargaArrayProductos(urlProductos, 'productos')
-                }, 2000)
+                }, 5000)
             })
             
         }

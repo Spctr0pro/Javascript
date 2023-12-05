@@ -16,7 +16,7 @@ const btnComprarCarrito = document.querySelector("button#btnComprarCarrito")
 
 /* CREA HTML */
 function crearDetalleCarritoHTML(producto) {
-    return `<td align="center"><img src="${producto.imagen
+    return `<td align="center" class="columna"><img src="${producto.imagen
         }" class="img-producto" /></td>
             <td>${producto.nombre}</td>
             <td>${producto.precio.toLocaleString("es-CL")}</td>
@@ -73,8 +73,9 @@ function OcultaControles(option) {
         case 4:
             contenedor.classList.remove("ocultar-panel");
             detalleCarrito.classList.remove("detalle-carrito");
-            carritoVacio.classList.remove("detalle-vacio");
             detalleCarrito.classList.add("ocultar-panel");
+            carritoVacio.classList.remove("detalle-vacio")
+            carritoVacio.classList.add("ocultar-panel");
             break;
     }
 }

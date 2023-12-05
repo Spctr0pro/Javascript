@@ -217,9 +217,10 @@ function activarClickEnBotones() {
                 gravity: "bottom", // `top` or `bottom`
                 position: "right", // `left`, `center` or `right`
                 stopOnFocus: false, // Prevents dismissing of toast on hover
+                className: "toastify-css",
                 style: {
                     background: "green",
-                },
+                  },
                 // onClick: function(){} // Callback after click
             }).showToast();
             GuardaCarrito();
@@ -266,6 +267,9 @@ btnComprarCarrito.addEventListener("click", () => {
             swal("Felicidades tú compra se ha efectuado con exito!", {
                 icon: "success",
             });
+            localStorage.removeItem("MiCarrito")
+            carrito = JSON.parse(localStorage.getItem("MiCarrito")) || []
+            cargaArrayProductos(urlProductos, 'productos')
         }
     });
 })

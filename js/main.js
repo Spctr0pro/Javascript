@@ -198,6 +198,11 @@ function activarClickEnBotonesCarrito() {
     });
 }
 
+function EliminarCarrito(){
+    localStorage.removeItem("MiCarrito")
+    carrito.splice(0, carrito.length)
+}
+
 /* FIN FUNCIONES UTILES */
 
 /* EVENTOS BOTONES */
@@ -220,7 +225,7 @@ function activarClickEnBotones() {
                 className: "toastify-css",
                 style: {
                     background: "green",
-                  },
+                    },
                 // onClick: function(){} // Callback after click
             }).showToast();
             GuardaCarrito();
@@ -267,8 +272,7 @@ btnComprarCarrito.addEventListener("click", () => {
             swal("Felicidades tú compra se ha efectuado con exito!", {
                 icon: "success",
             });
-            localStorage.removeItem("MiCarrito")
-            carrito = JSON.parse(localStorage.getItem("MiCarrito")) || []
+            EliminarCarrito()
             cargaArrayProductos(urlProductos, 'productos')
         }
     });

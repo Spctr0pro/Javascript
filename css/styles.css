@@ -170,6 +170,11 @@ div.importe {
     width: 100%;
 }
 
+.expande-columna{
+    font-weight: 900;
+    font-size: 20px;
+}
+
 .detalle-vacio{
     display: flex;
     justify-content: center;

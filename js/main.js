@@ -1,6 +1,7 @@
 /* CONTANTES */
 const urlProductos = "js/productos.json"
 const urlMensajes = "js/mensajes.json"
+const idTimeout = 0
 const productos = []
 const mensajes = []
 const carrito = JSON.parse(localStorage.getItem("MiCarrito")) || []
@@ -29,6 +30,15 @@ function crearCardCarritoVacio() {
                 <div><img src="images/not-found.png" class="img-not-found" /></div>
                 <div class="leyenda-error">Ups no encontramos productos en tú carrito</div>
                 <div class="leyenda-intento">Agrega productos a tú carrito para poder visualizarlos.</div>
+                <div><button id="btnSeguirComprando2" class="button-sigue-comprando" type="button">Seguir comprando</button></div>
+            </div>`;
+}
+
+function crearCardExito() {
+    return `<div class="div-card-exito">
+                <div><img src="images/success.png" class="img-not-found" /></div>
+                <div class="leyenda-error">Felicidades tú compra se efectuo con exito</div>
+                <div class="leyenda-intento">En unos segundos seras redireccionado a la página principal</div>
                 <div><button id="btnSeguirComprando2" class="button-sigue-comprando" type="button">Seguir comprando</button></div>
             </div>`;
 }
@@ -94,17 +104,16 @@ function obtenerMensaje(opcion) {
     return textoMensaje.length > 0 ? textoMensaje[0].mensaje : "";
 }
 
-function cargaArray(jsonData, type){
-    switch(type)
-            {
-                case 'productos':
-                    productos.push(...jsonData)
-                    cargarProductos()
-                break
-                case 'mensajes':
-                    mensajes.push(...jsonData)
-                break
-            }
+function cargaArray(jsonData, type) {
+    switch (type) {
+        case 'productos':
+            productos.push(...jsonData)
+            cargarProductos()
+            break
+        case 'mensajes':
+            mensajes.push(...jsonData)
+            break
+    }
 }
 
 /* DATOS DESDE ARCHIVO */
@@ -130,6 +139,7 @@ function cargarProductos() {
 }
 
 function cargaDetalleCarrito() {
+    clearTimeout(idTimeout)
     tablaCarrito.innerHTML = "";
     carritoVacio.innerHTML = "";
     if (carrito.length > 0) {
@@ -197,12 +207,6 @@ function activarClickEnBotonesCarrito() {
         });
     });
 }
-
-function EliminarCarrito(){
-    localStorage.removeItem("MiCarrito")
-    carrito.splice(0, carrito.length)
-}
-
 /* FIN FUNCIONES UTILES */
 
 /* EVENTOS BOTONES */
@@ -225,7 +229,7 @@ function activarClickEnBotones() {
                 className: "toastify-css",
                 style: {
                     background: "green",
-                    },
+                },
                 // onClick: function(){} // Callback after click
             }).showToast();
             GuardaCarrito();
@@ -271,9 +275,17 @@ btnComprarCarrito.addEventListener("click", () => {
         if (comprar) {
             swal("Felicidades tú compra se ha efectuado con exito!", {
                 icon: "success",
-            });
-            EliminarCarrito()
-            cargaArrayProductos(urlProductos, 'productos')
+            }).then(() => {
+                OcultaControles(2);
+                btnComprarCarrito.classList.add('ocultar-boton')
+                carritoVacio.innerHTML = crearCardExito();
+                idTimeout = setTimeout(() => {
+                    localStorage.removeItem("MiCarrito")
+                    carrito.splice(0, carrito.length)
+                    cargaArrayProductos(urlProductos, 'productos')
+                }, 2000)
+            })
+            
         }
     });
 })

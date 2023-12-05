@@ -136,6 +136,21 @@ div.importe {
     margin-bottom: 40px;
 }
 
+.div-card-exito {
+    width: auto;
+    padding: 40px;
+    max-width: 900px;
+    text-align: center;
+    border: 1px solid green;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 2px 2px 8px lightgrey;
+    /* background-color: rgba(255, 0, 0, 0.091); */
+    margin-top: 10px;
+    margin-bottom: 40px;
+    background-color: rgb(166, 245, 210);
+}
+
 .img-not-found {
     width: 50%;
     height: 50%;

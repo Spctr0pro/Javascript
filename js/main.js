@@ -273,7 +273,7 @@ btnComprarCarrito.addEventListener("click", () => {
         class: "button-sweet",
     }).then((comprar) => {
         if (comprar) {
-            swal("Felicidades tú compra se ha efectuado con exito!", {
+            swal("Felicidades tú compra se ha efectuado con éxito!", {
                 icon: "success",
             }).then(() => {
                 OcultaControles(2);
